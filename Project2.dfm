@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 192
-  Top = 125
-  Width = 788
+  Left = 157
+  Top = 206
+  Width = 838
   Height = 540
   Caption = 'Form1'
   Color = clBtnFace
@@ -20,7 +20,7 @@ object Form1: TForm1
   object Tlo: TShape
     Left = 0
     Top = 0
-    Width = 772
+    Width = 822
     Height = 501
     Align = alClient
     Brush.Color = clMedGray
@@ -650,6 +650,87 @@ object Form1: TForm1
       291E17291E17291E17291E17291E17291E17291E17291E17291E17291E17291E
       17291E17291E17291E17291E17291EFFFFFF}
     Transparent = True
+  end
+  object Label1: TLabel
+    Left = 208
+    Top = 32
+    Width = 377
+    Height = 29
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Punkt dla gracza prawego >'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object Label2: TLabel
+    Left = 256
+    Top = 72
+    Width = 297
+    Height = 29
+    Alignment = taCenter
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object Label3: TLabel
+    Left = 256
+    Top = 120
+    Width = 297
+    Height = 29
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Ilosc odbic: '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
+  end
+  object Button1: TButton
+    Left = 320
+    Top = 304
+    Width = 161
+    Height = 41
+    Caption = 'Nowa gra'
+    DragCursor = crHandPoint
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 280
+    Top = 256
+    Width = 249
+    Height = 41
+    Caption = 'Nast'#281'pna runda'
+    DragCursor = crHandPoint
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    OnClick = Button2Click
   end
   object TimerLeftTop: TTimer
     Enabled = False
