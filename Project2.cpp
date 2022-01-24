@@ -130,7 +130,15 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
      Ball->Left < PaddleLeft->Left+PaddleLeft->Width)
      {
        ballBounces++;
-       if(x<0) x=-x;
+       if(x<0)
+       {
+       x=-x;
+
+       if((Ball->Left <= PaddleLeft->Left + PaddleLeft->Width &&
+        Ball->Top+Ball->Height/2 <= PaddleLeft->Top+2*PaddleLeft->Height/3 &&
+        Ball->Top+Ball->Height/2 >= PaddleLeft->Top + PaddleLeft->Height/3))
+          x= 1.5 * x;
+       }
      }
     else if
     (Ball->Top+Ball->Height/2 >= PaddleRight->Top &&
@@ -138,9 +146,16 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
      Ball->Left+Ball->Width >= PaddleRight->Left)
      {
       ballBounces++;
-      if (x>0) x=-x;
-     }
 
+      if (x>0)
+      {
+      x=-x;
+       if(Ball->Left <= PaddleRight->Left + PaddleRight->Width &&
+       Ball->Top + Ball->Height/2 <= PaddleRight->Top + 2 * PaddleRight->Height/3 &&
+       Ball->Top + Ball->Height/2 >= PaddleRight->Top + PaddleRight->Height/3)
+       x= 1.5 * x;
+     }
+     }
      //pokaz punktacje
 
      AnsiString rightPoints;
@@ -190,8 +205,6 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
         ballBounces=0;
         rightPlayerPoints=0;
         leftPlayerPoints=0;
-
-
 
 }
 //---------------------------------------------------------------------------
