@@ -172,6 +172,10 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
+        if(Application->MessageBox("Czy na pewno chcesz zagrac od nowa?", "PotwierdŸ",
+         MB_YESNO|MB_ICONQUESTION) == IDYES)
+        {
+
         //ustawiam pilke w neutralnym miejsscu
         Ball->Left=368;
         Ball->Top=200;
@@ -205,6 +209,8 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
         ballBounces=0;
         rightPlayerPoints=0;
         leftPlayerPoints=0;
+
+        }
 
 }
 //---------------------------------------------------------------------------
@@ -243,6 +249,16 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
         //resetuje ilosc odbic
         ballBounces=0;
 
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+      if(Application->MessageBox("Czy na pewno zakoñczyc program?", "PotwierdŸ",
+      MB_YESNO|MB_ICONQUESTION) == IDNO)
+      {
+       Action=caNone;
+      }
 }
 //---------------------------------------------------------------------------
 

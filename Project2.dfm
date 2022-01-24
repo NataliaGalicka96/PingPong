@@ -13,6 +13,7 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   PixelsPerInch = 96
@@ -699,10 +700,11 @@ object Form1: TForm1
     Visible = False
   end
   object Button1: TButton
-    Left = 320
+    Left = 328
     Top = 304
     Width = 161
     Height = 41
+    Cursor = crHandPoint
     Caption = 'Nowa gra'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
@@ -720,6 +722,7 @@ object Form1: TForm1
     Top = 256
     Width = 249
     Height = 41
+    Cursor = crHandPoint
     Caption = 'Nast'#281'pna runda'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
