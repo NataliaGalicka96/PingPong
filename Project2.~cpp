@@ -252,3 +252,13 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+{
+      if(Application->MessageBox("Czy na pewno zakoñczyc program?", "PotwierdŸ",
+      MB_YESNO|MB_ICONQUESTION) == IDNO)
+      {
+       Action=caNone;
+      }
+}
+//---------------------------------------------------------------------------
+
