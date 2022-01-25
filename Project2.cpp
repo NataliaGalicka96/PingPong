@@ -16,6 +16,27 @@ int ballBounces=0;
 int leftPlayerPoints=0;
 int rightPlayerPoints=0;
 
+void setWindowStartedParameters()
+{
+   Form1->Label1->Left = Form1->Tlo->Width/2 - Form1->Label1->Width/2;
+   Form1->Label2->Left = Form1->Tlo->Width/2 - Form1->Label2->Width/2;
+   Form1->Label3->Left = Form1->Tlo->Width/2 - Form1->Label3->Width/2;
+   Form1->Button2->Left = Form1->Tlo->Width/2 - Form1->Button2->Width/2;
+   Form1->Button1->Left = Form1->Tlo->Width/2 - Form1->Button1->Width/2;
+
+}
+void setBallAndPaddlesStartedParameter()
+{
+   Form1->PaddleLeft->Left = 80;
+   Form1->PaddleLeft->Top = Form1->Tlo->Height/2 - Form1->PaddleLeft->Height/2;
+   Form1->PaddleRight->Left = Form1->Tlo->Width - 80 - Form1->PaddleRight->Width;
+   Form1->PaddleRight->Top = Form1->Tlo->Height/2 - Form1->PaddleRight->Height/2;
+
+   Form1->Ball->Left = Form1->Tlo->Width/2-16;
+   Form1->Ball->Top= Form1->Tlo->Height/2-16;
+}
+
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -175,10 +196,9 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
         if(Application->MessageBox("Czy na pewno chcesz zagrac od nowa?", "PotwierdŸ",
          MB_YESNO|MB_ICONQUESTION) == IDYES)
         {
+         setBallAndPaddlesStartedParameter();
+         setWindowStartedParameters();
 
-        //ustawiam pilke w neutralnym miejsscu
-        Ball->Left=368;
-        Ball->Top=200;
 
         //pokaz pilke na ekranie
         Ball->Visible=true;
@@ -191,13 +211,6 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
         Timer_Ball->Enabled=true;
         Button1->Visible=false;
         Button2->Visible=false;
-
-        //Ustawiam paletki na pozycjach
-        PaddleLeft->Left=32;
-        PaddleLeft->Top=168;
-
-        PaddleRight->Left=712;
-        PaddleRight->Top=168;
 
         //Wy³aczam napisy
         Label1->Visible=false;
@@ -217,28 +230,21 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
-          //ustawiam pilke w neutralnym miejsscu
-        Ball->Left=368;
-        Ball->Top=200;
-
         //pokaz pilke na ekranie
         Ball->Visible=true;
-
+        
         //Kierunek pi³ki
         x=-8;
         y=-8;
-
+        
         //Wprowadzam pilke w ruch
         Timer_Ball->Enabled=true;
         Button1->Visible=false;
         Button2->Visible=false;
 
-        //Ustawiam paletki na pozycjach
-        PaddleLeft->Left=32;
-        PaddleLeft->Top=168;
+        setBallAndPaddlesStartedParameter();
+        setWindowStartedParameters();
 
-        PaddleRight->Left=712;
-        PaddleRight->Top=168;
 
         //Wy³aczam napisy
         Label1->Visible=false;
