@@ -262,3 +262,18 @@ void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+        Application->MessageBox(
+        "Witaj w grze PingPong.\n\n"
+        "Lewy gracz steruje wciskaj¹c klawisze A oraz Z.\n"
+        "Prawy gracz steruje wciskaj¹c strza³ki go góry i w dó³.\n\n"
+        "Dla urozmaicenia zabawy:\n"
+        "Kiedy odbijesz pi³kê na œrodku paletki, wówczas zmienisz jej k¹t odbicia i pi³ka przyspieszy.\n"
+        "Im d³u¿ej odbijasz, tym pi³ka szybciej przemieszcza siê.\n"
+        "Mo¿esz dowolnie zmieniac pole gry.\n\n"
+        "Mi³ej zabawy!", "PingPong", MB_OK);
+
+}
+//---------------------------------------------------------------------------
+
