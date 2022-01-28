@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 315
-  Top = 82
-  Width = 838
+  Left = 306
+  Top = 148
+  Width = 786
   Height = 540
-  Caption = 'Form1'
+  Caption = 'Ping Pong by Natalia'
   Color = clBtnFace
   UseDockManager = True
   DockSite = True
@@ -22,7 +22,7 @@ object Form1: TForm1
   object Tlo: TShape
     Left = 0
     Top = 0
-    Width = 822
+    Width = 770
     Height = 501
     Align = alClient
     Brush.Color = clGreen
@@ -654,33 +654,36 @@ object Form1: TForm1
     Transparent = True
   end
   object Label1: TLabel
-    Left = 208
-    Top = 32
-    Width = 377
-    Height = 29
+    Left = 168
+    Top = 16
+    Width = 449
+    Height = 41
     Alignment = taCenter
     AutoSize = False
-    Caption = 'Punkt dla gracza prawego >'
+    Color = clGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -23
+    Font.Height = -33
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentColor = False
     ParentFont = False
     Visible = False
   end
   object Label2: TLabel
     Left = 256
-    Top = 72
+    Top = 64
     Width = 297
-    Height = 29
+    Height = 37
     Alignment = taCenter
     AutoSize = False
+    Color = clGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -23
+    Font.Height = -31
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
     Visible = False
   end
@@ -691,12 +694,48 @@ object Form1: TForm1
     Height = 29
     Alignment = taCenter
     AutoSize = False
-    Caption = 'Ilosc odbic: '
+    Caption = 'Number of bounces:'
+    Color = clGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -23
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 160
+    Top = 80
+    Width = 481
+    Height = 49
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Let'#39's play Ping Pong!'
+    Color = clGreen
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -40
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 112
+    Top = 48
+    Width = 561
+    Height = 65
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGreen
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -40
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
     ParentFont = False
     Visible = False
   end
@@ -706,7 +745,7 @@ object Form1: TForm1
     Width = 161
     Height = 41
     Cursor = crHandPoint
-    Caption = 'Nowa gra'
+    Caption = 'New game'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -724,7 +763,7 @@ object Form1: TForm1
     Width = 249
     Height = 41
     Cursor = crHandPoint
-    Caption = 'Nast'#281'pna runda'
+    Caption = 'Next round'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
@@ -736,38 +775,61 @@ object Form1: TForm1
     Visible = False
     OnClick = Button2Click
   end
+  object Button3: TButton
+    Left = 328
+    Top = 352
+    Width = 161
+    Height = 41
+    Cursor = crHandPoint
+    Caption = 'New game'
+    DragCursor = crHandPoint
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -23
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    OnClick = Button3Click
+  end
   object TimerLeftTop: TTimer
     Enabled = False
-    Interval = 20
+    Interval = 15
     OnTimer = TimerLeftTopTimer
     Left = 32
     Top = 136
   end
   object TimerRightTop: TTimer
     Enabled = False
-    Interval = 20
+    Interval = 15
     OnTimer = TimerRightTopTimer
     Left = 704
     Top = 136
   end
   object TimerRightDown: TTimer
     Enabled = False
-    Interval = 20
+    Interval = 15
     OnTimer = TimerRightDownTimer
     Left = 712
     Top = 328
   end
   object TimerLeftDown: TTimer
     Enabled = False
-    Interval = 20
+    Interval = 15
     OnTimer = TimerLeftDownTimer
     Left = 24
     Top = 312
   end
   object Timer_Ball: TTimer
-    Interval = 34
+    Enabled = False
+    Interval = 20
     OnTimer = Timer_BallTimer
     Left = 368
     Top = 160
+  end
+  object OdliczanieCzasu: TTimer
+    Enabled = False
+    Left = 120
+    Top = 136
   end
 end

@@ -27,6 +27,10 @@ __published:	// IDE-managed Components
         TLabel *Label3;
         TButton *Button1;
         TButton *Button2;
+        TLabel *Label4;
+        TButton *Button3;
+        TLabel *Label5;
+        //TTimer *OdliczanieCzasu;
         void __fastcall TimerLeftTopTimer(TObject *Sender);
         void __fastcall TimerLeftDownTimer(TObject *Sender);
         void __fastcall TimerRightTopTimer(TObject *Sender);
@@ -40,6 +44,8 @@ __published:	// IDE-managed Components
         void __fastcall Button2Click(TObject *Sender);
         void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
         void __fastcall FormCreate(TObject *Sender);
+        void __fastcall Button3Click(TObject *Sender);
+        //void __fastcall OdliczanieCzasuTimer(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);
