@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 411
-  Top = 65
+  Left = 306
+  Top = 148
   Width = 786
   Height = 540
-  Caption = 'Form1'
+  Caption = 'Ping Pong by Natalia'
   Color = clBtnFace
   UseDockManager = True
   DockSite = True
@@ -660,7 +660,6 @@ object Form1: TForm1
     Height = 41
     Alignment = taCenter
     AutoSize = False
-    Caption = 'Punkt dla gracza prawego >>'
     Color = clGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -695,7 +694,7 @@ object Form1: TForm1
     Height = 29
     Alignment = taCenter
     AutoSize = False
-    Caption = 'Ilosc odbic: '
+    Caption = 'Number of bounces:'
     Color = clGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -713,7 +712,7 @@ object Form1: TForm1
     Height = 49
     Alignment = taCenter
     AutoSize = False
-    Caption = 'Zagrajmy w Ping Ponga!'
+    Caption = 'Let'#39's play Ping Pong!'
     Color = clGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -724,10 +723,10 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 160
-    Top = 128
-    Width = 481
-    Height = 46
+    Left = 112
+    Top = 48
+    Width = 561
+    Height = 65
     Alignment = taCenter
     AutoSize = False
     Color = clGreen
@@ -746,7 +745,7 @@ object Form1: TForm1
     Width = 161
     Height = 41
     Cursor = crHandPoint
-    Caption = 'Nowa gra'
+    Caption = 'New game'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -764,7 +763,7 @@ object Form1: TForm1
     Width = 249
     Height = 41
     Cursor = crHandPoint
-    Caption = 'Nast'#281'pna runda'
+    Caption = 'Next round'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
@@ -782,7 +781,7 @@ object Form1: TForm1
     Width = 161
     Height = 41
     Cursor = crHandPoint
-    Caption = 'Nowa gra'
+    Caption = 'New game'
     DragCursor = crHandPoint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

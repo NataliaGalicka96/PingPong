@@ -66,7 +66,7 @@ void startGame()
         Form1->Label5->Visible=false;
      }
 
-   sndPlaySound("snd/start.wav",SND_ASYNC);
+   PlaySound("START", HInstance, SND_ASYNC | SND_RESOURCE);
    Application -> ProcessMessages();
    Sleep(1000);
 
@@ -153,7 +153,7 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
     //left player's miss
     if(Ball->Left <= PaddleLeft->Left-5)
     {
-     sndPlaySound("snd/loss.wav", SND_ASYNC);
+     PlaySound("LOSS", HInstance, SND_ASYNC | SND_RESOURCE);
      Timer_Ball->Enabled=false;
      Ball->Visible=false;
 
@@ -177,7 +177,7 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
     //right player's miss
     if(Ball->Left>=PaddleRight->Left+PaddleRight->Width+5)
     {
-     sndPlaySound("snd/loss.wav", SND_ASYNC);
+     PlaySound("LOSS", HInstance, SND_ASYNC | SND_RESOURCE);
      Timer_Ball->Enabled=false;
      Ball->Visible=false;
 
@@ -206,7 +206,7 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
      {
        x = 1.1*x;
        ballBounces++;
-       sndPlaySound("snd/ball.wav", SND_ASYNC);
+       PlaySound("BALL", HInstance, SND_ASYNC | SND_RESOURCE);
 
        if(x<0)
        {
@@ -242,7 +242,7 @@ void __fastcall TForm1::Timer_BallTimer(TObject *Sender)
 
        x = 1.1 * x;
        ballBounces++;
-       sndPlaySound("snd/ball.wav", SND_ASYNC);
+       PlaySound("BALL", HInstance, SND_ASYNC | SND_RESOURCE);
        if (x>0)
        {
        //the middle of the paddle
